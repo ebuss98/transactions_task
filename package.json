@@ -1,0 +1,33 @@
+{
+  "name": "transactions-task",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "db_create": "npx sequelize-cli db:create",
+    "db_run_migration": "npx sequelize-cli db:migrate",
+    "db_migration_undo": "npx sequelize-cli db:migrate:undo",
+    "build": "tsc",
+    "start_api": "node ./dist/src/api.js",
+    "build_and_start_api": "npm run build && npm run start_api",
+    "start_service": "node ./dist/src/service.js",
+    "build_and_start_service": "npm run build && npm run start_service"
+  },
+  "dependencies": {
+    "@types/sequelize": "^4.28.9",
+    "axios": "^0.21.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2",
+    "sequelize": "^6.6.2",
+    "sequelize-cli-typescript": "^3.2.0-c"
+  },
+  "devDependencies": {
+    "pg": "^8.6.0",
+    "sequelize-cli": "^6.2.0",
+    "typescript": "^4.2.4"
+  }
+}
